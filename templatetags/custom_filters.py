@@ -1,8 +1,9 @@
 import decimal
+from datetime import date, datetime
+
 import requests
 from apps.utils.helpers.dict import get_dict_item_or_default, string_to_dict_or_default
 from apps.utils.helpers.string import get_short_email, get_short_url, get_short_number
-from datetime import date, datetime
 from django import template
 from django.core.files.storage import default_storage
 from django.db import models

@@ -1,14 +1,15 @@
 import logging
 import os
+from io import BytesIO
+from uuid import uuid4
+
+import requests
 from django.core.files import File
 from django.core.files.storage import default_storage
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.utils import timezone
-from io import BytesIO
-from uuid import uuid4
 
-import requests
 from .requests import get_agent_head_or_default
 
 logger = logging.getLogger('custom')

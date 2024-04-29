@@ -1,7 +1,7 @@
 import logging
-from django.conf import settings
 
 import stripe
+from django.conf import settings
 
 logger = logging.getLogger('custom')
 

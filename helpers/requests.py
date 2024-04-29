@@ -1,9 +1,9 @@
 import os
 import random
-from django.conf import settings
-from ua_parser import user_agent_parser
 
 import requests
+from django.conf import settings
+from ua_parser import user_agent_parser
 
 
 def is_ajax_request(request):

@@ -1,8 +1,9 @@
 import logging
+from urllib.parse import urljoin
+
 import requests
 from django.conf import settings
 from requests.auth import HTTPBasicAuth
-from urllib.parse import urljoin
 
 logger = logging.getLogger('custom')
 

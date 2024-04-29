@@ -1,9 +1,9 @@
 import datetime as dt
-import numpy as np
 import random
 import re
-
 import string
+
+import numpy as np
 
 _SHORT_UUID_ALPHABET = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 

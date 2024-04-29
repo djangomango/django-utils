@@ -6,6 +6,7 @@ from django.template.defaultfilters import striptags, truncatewords
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
+
 class TimestampMixin(models.Model):
     """
     Mixin that adds created_at and modified_at fields to a model.

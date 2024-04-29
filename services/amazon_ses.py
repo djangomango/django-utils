@@ -1,8 +1,9 @@
-import boto3
 import logging
-from django.conf import settings
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+import boto3
+from django.conf import settings
 
 logger = logging.getLogger('custom')
 

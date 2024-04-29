@@ -1,5 +1,6 @@
-import googlemaps
 import logging
+
+import googlemaps
 from django.conf import settings
 from googlemaps.exceptions import ApiError
 
