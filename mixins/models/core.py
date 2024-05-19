@@ -73,7 +73,7 @@ class RemoveFieldFileOnChangeMixin(models.Model):
                 field = getattr(self, field_name, None)
                 stored_field = self._stored.pop(field_name, None) if hasattr(self, '_stored') else None
 
-                if field != stored_field:
+                if field != stored_field and stored_field:
                     remove_storage_file_if_exists(stored_field)
 
         super().save(*args, **kwargs)
