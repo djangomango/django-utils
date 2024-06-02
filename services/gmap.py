@@ -57,7 +57,7 @@ class GmapHandler:
 
     def get_formatted_address_from_geocode(self, geocode_result):
         try:
-            return geocode_result[0]['formatted_address']
+            return geocode_result['candidates'][0]['formatted_address']
         except (IndexError, KeyError) as e:
             logger.error(f"Gmap Service: An error occurred while getting formatted address from geocode: {e}")
 
@@ -65,7 +65,7 @@ class GmapHandler:
 
     def get_parsed_address_from_geocode(self, geocode_result):
         try:
-            address_components = geocode_result[0]['address_components']
+            address_components = geocode_result['candidates'][0]['address_components']
 
             address = {}
             for component in address_components:
