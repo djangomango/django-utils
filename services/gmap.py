@@ -43,8 +43,8 @@ class GmapHandler:
 
     def get_point_from_geocode(self, geocode_result):
         try:
-            lat = geocode_result[0]['geometry']['location']['lat']
-            lng = geocode_result[0]['geometry']['location']['lng']
+            lat = geocode_result['candidates'][0]['geometry']['location']['lat']
+            lng = geocode_result['candidates'][0]['geometry']['location']['lng']
             lat, lng = float(lat), float(lng)
 
             if lat != 0 or lng != 0:
@@ -53,7 +53,7 @@ class GmapHandler:
         except (IndexError, KeyError) as e:
             logger.error(f"Gmap Service: An error occurred while getting point from geocode: {e}")
 
-        return None
+        return None, None
 
     def get_formatted_address_from_geocode(self, geocode_result):
         try:
